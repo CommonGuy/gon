@@ -149,6 +149,7 @@ bundle_id = "com.mitchellh.example.terraform"
 apple_id {
   username = "mitchell@example.com"
   password = "@env:AC_PASSWORD"
+  provider = "UL304B4VGY"
 }
 
 sign {
