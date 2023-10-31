@@ -18,10 +18,10 @@ builds:
 archives:
   - id: macos-zip
     format: zip
-    name_template: "{{ .ProjectName }}_{{ .Os }}"
-    replacements:
-      darwin: macos
-      amd64: x86_64
+    name_template: >-
+      {{- .ProjectName }}_
+      {{- if eq .Os "darwin" }}macos
+      {{- else }}{{ .Os }}{{ end }}
 
 snapshot:
   name_template: "{{ .Tag }}-next"
